@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-AQ-Siq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DjU-wW-uR5">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="ioE-Ve-FD1" customClass="ImageCell" customModule="Test" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" translatesAutoresizingMaskIntoConstraints="NO" id="KHm-El-opP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KHm-El-opP" secondAttribute="trailing" id="dpV-Vu-oeZ"/>
+                                            <constraint firstItem="KHm-El-opP" firstAttribute="top" secondItem="ioE-Ve-FD1" secondAttribute="top" id="fGr-dA-a2G"/>
+                                            <constraint firstItem="KHm-El-opP" firstAttribute="leading" secondItem="ioE-Ve-FD1" secondAttribute="leading" id="qFN-ME-4gi"/>
+                                            <constraint firstAttribute="bottom" secondItem="KHm-El-opP" secondAttribute="bottom" id="vUB-4U-IEt"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="photo" destination="KHm-El-opP" id="Lhc-Oq-Wog"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCell" id="X1F-0z-oGy" customClass="VideoCell" customModule="Test" customModuleProvider="target">
+                                        <rect key="frame" x="137.5" y="10" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vut-VF-VPC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WoL-iU-pOq">
+                                                    <rect key="frame" x="33.5" y="34" width="32" height="32"/>
+                                                    <state key="normal" image="btn_play">
+                                                        <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="onPlay:" destination="X1F-0z-oGy" eventType="touchUpInside" id="YHa-nk-rFu"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0P-Ig-qXA">
+                                                    <rect key="frame" x="33.5" y="34" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="btn_pause">
+                                                        <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="onPause:" destination="X1F-0z-oGy" eventType="touchUpInside" id="UeX-ac-JKI"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Vut-VF-VPC" firstAttribute="top" secondItem="X1F-0z-oGy" secondAttribute="top" id="28C-GV-5JH"/>
+                                            <constraint firstAttribute="bottom" secondItem="Vut-VF-VPC" secondAttribute="bottom" id="YEG-WO-e17"/>
+                                            <constraint firstItem="WoL-iU-pOq" firstAttribute="centerX" secondItem="X1F-0z-oGy" secondAttribute="centerX" id="YNm-SB-b4X"/>
+                                            <constraint firstItem="WoL-iU-pOq" firstAttribute="centerY" secondItem="X1F-0z-oGy" secondAttribute="centerY" id="fXa-yb-GIo"/>
+                                            <constraint firstItem="Vut-VF-VPC" firstAttribute="leading" secondItem="X1F-0z-oGy" secondAttribute="leading" id="jgV-t7-aMy"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vut-VF-VPC" secondAttribute="trailing" id="t0U-Hg-RRX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="btnPause" destination="B0P-Ig-qXA" id="NMd-Wi-pwN"/>
+                                            <outlet property="btnPlay" destination="WoL-iU-pOq" id="qvo-j1-j4H"/>
+                                            <outlet property="videoView" destination="Vut-VF-VPC" id="1X0-74-3SY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="75B-eL-2pX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ws6-Qg-X1z"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gPc-AQ-Siq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5xQ-lH-7dZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gPc-AQ-Siq" secondAttribute="bottom" id="C4m-SK-BTz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gPc-AQ-Siq" secondAttribute="trailing" id="R4a-g5-zHM"/>
+                            <constraint firstItem="gPc-AQ-Siq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SGq-zc-q1F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="gPc-AQ-Siq" id="TX9-Xg-eh9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_pause" width="32" height="32"/>
+        <image name="btn_play" width="32" height="32"/>
+        <image name="plus" width="512" height="512"/>
+    </resources>
+</document>
